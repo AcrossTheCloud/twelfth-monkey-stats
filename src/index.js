@@ -43,9 +43,6 @@ fetch('https://qyjbcjs0x7.execute-api.ap-southeast-2.amazonaws.com/dev/725c0cb7-
     }
     distanceDataByTeam[event.team].push([new Date(event.start_date).getTime(), event.distance]);
   });
-  console.log(data);
-  console.log(teamNames);
-  console.log(distanceDataByTeam);
 
   const series = [];
   teamNames.forEach(team => {
