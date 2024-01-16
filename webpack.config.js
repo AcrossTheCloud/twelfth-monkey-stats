@@ -6,7 +6,7 @@ module.exports = {
   entry: './src/index.js',
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Custom template',
+      title: 'Twelfth Monkey stats',
       // Load a custom template (lodash by default)
       template: 'src/index.html'
     })
