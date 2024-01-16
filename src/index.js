@@ -17,7 +17,14 @@ let options = {
   },
   theme: {
     mode: 'dark' 
-  }
+  },
+  legend: {
+    show: true,
+    position: 'top'
+  },
+  markers: {
+    size: 5,
+  },
 }
 
 
