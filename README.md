@@ -1,7 +1,5 @@
 # Twelfth Monkey stats
 
-A basic webpack project for bundling and managing JavaScript modules.
-
 ## Installation
 
 1. Clone the repository: `git clone https://github.com/AcrossTheCloud/twelfth-monkey-stats.git`
