@@ -1,8 +1,7 @@
 # Twelfth Monkey stats
 
 ## API
-
-The API is a JSON REST API accessible via a GET request to https://stats-api.twelfth-monkey.com/ and returns an array of Strava activities of the form found in the [Strava documention for the activities](https://developers.strava.com/docs/reference/#api-Activities-getActivityById) but with the following differences:
+The API is a JSON REST API accessible via a GET request to https://stats-api.twelfth-monkey.com/{id} and returns an array of Strava activities of the form found in the [Strava documention for the activities](https://developers.strava.com/docs/reference/#api-Activities-getActivityById) but with the following differences:
 * No location data is present, other than the "timezone" field.
 * The "athlete" field (including athlete.id) is removed, and
 * A "team" field is added with the team name.
