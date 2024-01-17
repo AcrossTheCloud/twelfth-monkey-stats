@@ -1,0 +1,619 @@
+[
+    {
+        "resource_state": 3,
+        "name": "12 M new test",
+        "distance": 590.1,
+        "moving_time": 409,
+        "elapsed_time": 510,
+        "total_elevation_gain": 0,
+        "type": "Walk",
+        "sport_type": "Walk",
+        "id": 10377287834,
+        "start_date": "2023-12-14T04:20:32Z",
+        "start_date_local": "2023-12-14T14:50:32Z",
+        "timezone": "(GMT+09:30) Australia/Adelaide",
+        "utc_offset": 37800,
+        "achievement_count": 0,
+        "kudos_count": 0,
+        "comment_count": 0,
+        "athlete_count": 1,
+        "photo_count": 0,
+        "trainer": false,
+        "commute": false,
+        "manual": false,
+        "private": true,
+        "visibility": "only_me",
+        "flagged": false,
+        "gear_id": null,
+        "average_speed": 1.443,
+        "max_speed": 8.202,
+        "has_heartrate": false,
+        "heartrate_opt_out": false,
+        "display_hide_heartrate_option": false,
+        "elev_high": 48.4,
+        "elev_low": 45.8,
+        "upload_id": 11108270857,
+        "upload_id_str": "11108270857",
+        "external_id": "590F8D24-643E-463D-BE8E-558496CF0A62-activity.fit",
+        "from_accepted_tag": false,
+        "pr_count": 0,
+        "total_photo_count": 0,
+        "has_kudoed": false,
+        "description": null,
+        "calories": 0,
+        "perceived_exertion": null,
+        "prefer_perceived_exertion": null,
+        "segment_efforts": [],
+        "splits_metric": [
+            {
+                "distance": 590.1,
+                "elapsed_time": 510,
+                "elevation_difference": 0.1,
+                "moving_time": 409,
+                "split": 1,
+                "average_speed": 1.44,
+                "average_grade_adjusted_speed": null,
+                "pace_zone": 0
+            }
+        ],
+        "splits_standard": [
+            {
+                "distance": 590.1,
+                "elapsed_time": 510,
+                "elevation_difference": 0.1,
+                "moving_time": 409,
+                "split": 1,
+                "average_speed": 1.44,
+                "average_grade_adjusted_speed": null,
+                "pace_zone": 0
+            }
+        ],
+        "laps": [
+            {
+                "id": 35736781720,
+                "resource_state": 2,
+                "name": "Lap 1",
+                "activity": {
+                    "id": 10377287834,
+                    "visibility": "only_me",
+                    "resource_state": 1
+                },
+                "athlete": {
+                    "id": 11676310,
+                    "resource_state": 1
+                },
+                "elapsed_time": 520,
+                "moving_time": 520,
+                "start_date": "2023-12-14T04:20:32Z",
+                "start_date_local": "2023-12-14T14:50:32Z",
+                "distance": 590.08,
+                "average_speed": 1.13,
+                "max_speed": 8.202,
+                "lap_index": 1,
+                "split": 1,
+                "start_index": 0,
+                "end_index": 285,
+                "total_elevation_gain": 0,
+                "device_watts": false
+            }
+        ],
+        "photos": {
+            "primary": null,
+            "count": 0
+        },
+        "stats_visibility": [
+            {
+                "type": "heart_rate",
+                "visibility": "everyone"
+            },
+            {
+                "type": "pace",
+                "visibility": "everyone"
+            },
+            {
+                "type": "power",
+                "visibility": "everyone"
+            },
+            {
+                "type": "speed",
+                "visibility": "everyone"
+            },
+            {
+                "type": "calories",
+                "visibility": "everyone"
+            }
+        ],
+        "hide_from_home": false,
+        "device_name": "Strava iPhone App",
+        "embed_token": "52542e0f2e42c66cc8ded6d93c317f976c6fe887",
+        "available_zones": [],
+        "team": "Tonsley Todgers"
+    },
+    {
+        "resource_state": 3,
+        "name": "12M 12 monkeys",
+        "distance": 8,
+        "moving_time": 9,
+        "elapsed_time": 9,
+        "total_elevation_gain": 0,
+        "type": "Ride",
+        "sport_type": "Ride",
+        "workout_type": 0,
+        "id": 10377249836,
+        "start_date": "2023-12-14T04:02:57Z",
+        "start_date_local": "2023-12-14T14:32:57Z",
+        "timezone": "(GMT+09:30) Australia/Adelaide",
+        "utc_offset": 37800,
+        "achievement_count": 0,
+        "kudos_count": 0,
+        "comment_count": 0,
+        "athlete_count": 1,
+        "photo_count": 0,
+        "trainer": false,
+        "commute": false,
+        "manual": false,
+        "private": true,
+        "visibility": "only_me",
+        "flagged": false,
+        "gear_id": null,
+        "average_speed": 0.892,
+        "max_speed": 1.147,
+        "has_heartrate": false,
+        "heartrate_opt_out": false,
+        "display_hide_heartrate_option": false,
+        "elev_high": 393.3,
+        "elev_low": 393.3,
+        "upload_id": 11108230845,
+        "upload_id_str": "11108230845",
+        "external_id": "6D851155-F334-4601-ABA3-FA86467544D4-activity.fit",
+        "from_accepted_tag": false,
+        "pr_count": 0,
+        "total_photo_count": 0,
+        "has_kudoed": false,
+        "description": null,
+        "calories": 0,
+        "perceived_exertion": null,
+        "prefer_perceived_exertion": null,
+        "segment_efforts": [],
+        "splits_metric": [
+            {
+                "distance": 8,
+                "elapsed_time": 7,
+                "elevation_difference": 0,
+                "moving_time": 7,
+                "split": 1,
+                "average_speed": 1.14,
+                "average_grade_adjusted_speed": null,
+                "pace_zone": 0
+            }
+        ],
+        "splits_standard": [
+            {
+                "distance": 8,
+                "elapsed_time": 7,
+                "elevation_difference": 0,
+                "moving_time": 7,
+                "split": 1,
+                "average_speed": 1.14,
+                "average_grade_adjusted_speed": null,
+                "pace_zone": 0
+            }
+        ],
+        "laps": [
+            {
+                "id": 35736640626,
+                "resource_state": 2,
+                "name": "Lap 1",
+                "activity": {
+                    "id": 10377249836,
+                    "visibility": "only_me",
+                    "resource_state": 1
+                },
+                "athlete": {
+                    "id": 34111405,
+                    "resource_state": 1
+                },
+                "elapsed_time": 9,
+                "moving_time": 9,
+                "start_date": "2023-12-14T04:02:57Z",
+                "start_date_local": "2023-12-14T14:32:57Z",
+                "distance": 0,
+                "average_speed": 0,
+                "max_speed": 1.147,
+                "lap_index": 1,
+                "split": 1,
+                "start_index": 0,
+                "end_index": 2,
+                "total_elevation_gain": 0,
+                "device_watts": false
+            }
+        ],
+        "photos": {
+            "primary": null,
+            "count": 0
+        },
+        "stats_visibility": [
+            {
+                "type": "heart_rate",
+                "visibility": "everyone"
+            },
+            {
+                "type": "pace",
+                "visibility": "everyone"
+            },
+            {
+                "type": "power",
+                "visibility": "everyone"
+            },
+            {
+                "type": "speed",
+                "visibility": "everyone"
+            },
+            {
+                "type": "calories",
+                "visibility": "everyone"
+            }
+        ],
+        "hide_from_home": false,
+        "device_name": "Strava iPhone App",
+        "embed_token": "e2c4637b75d1759f5ac484a806c4e079a8aef5fc",
+        "available_zones": [],
+        "team": "Tonsley Todgers"
+    },
+    {
+        "resource_state": 3,
+        "name": "12",
+        "distance": 541.1,
+        "moving_time": 395,
+        "elapsed_time": 422,
+        "total_elevation_gain": 2.2,
+        "type": "Walk",
+        "sport_type": "Walk",
+        "id": 10377261330,
+        "start_date": "2023-12-14T04:03:41Z",
+        "start_date_local": "2023-12-14T14:33:41Z",
+        "timezone": "(GMT+09:30) Australia/Adelaide",
+        "utc_offset": 37800,
+        "achievement_count": 0,
+        "kudos_count": 0,
+        "comment_count": 0,
+        "athlete_count": 1,
+        "photo_count": 0,
+        "trainer": false,
+        "commute": false,
+        "manual": false,
+        "private": false,
+        "visibility": "everyone",
+        "flagged": false,
+        "gear_id": null,
+        "average_speed": 1.37,
+        "max_speed": 3.432,
+        "has_heartrate": false,
+        "heartrate_opt_out": false,
+        "display_hide_heartrate_option": false,
+        "elev_high": 50.4,
+        "elev_low": 47.8,
+        "upload_id": 11108242947,
+        "upload_id_str": "11108242947",
+        "external_id": "4374A613-F75B-4EB8-92C1-4B0733F4E48D-activity.fit",
+        "from_accepted_tag": false,
+        "pr_count": 0,
+        "total_photo_count": 0,
+        "has_kudoed": false,
+        "description": null,
+        "calories": 0,
+        "perceived_exertion": null,
+        "prefer_perceived_exertion": null,
+        "segment_efforts": [],
+        "splits_metric": [
+            {
+                "distance": 541.1,
+                "elapsed_time": 422,
+                "elevation_difference": 0.2,
+                "moving_time": 395,
+                "split": 1,
+                "average_speed": 1.37,
+                "average_grade_adjusted_speed": null,
+                "pace_zone": 0
+            }
+        ],
+        "splits_standard": [
+            {
+                "distance": 541.1,
+                "elapsed_time": 422,
+                "elevation_difference": 0.2,
+                "moving_time": 395,
+                "split": 1,
+                "average_speed": 1.37,
+                "average_grade_adjusted_speed": null,
+                "pace_zone": 0
+            }
+        ],
+        "laps": [
+            {
+                "id": 35736683680,
+                "resource_state": 2,
+                "name": "Lap 1",
+                "activity": {
+                    "id": 10377261330,
+                    "visibility": "everyone",
+                    "resource_state": 1
+                },
+                "athlete": {
+                    "id": 126432920,
+                    "resource_state": 1
+                },
+                "elapsed_time": 425,
+                "moving_time": 425,
+                "start_date": "2023-12-14T04:03:41Z",
+                "start_date_local": "2023-12-14T14:33:41Z",
+                "distance": 541.1,
+                "average_speed": 1.27,
+                "max_speed": 3.432,
+                "lap_index": 1,
+                "split": 1,
+                "start_index": 0,
+                "end_index": 0,
+                "total_elevation_gain": 2.2,
+                "device_watts": false
+            }
+        ],
+        "photos": {
+            "primary": null,
+            "count": 0
+        },
+        "stats_visibility": [
+            {
+                "type": "heart_rate",
+                "visibility": "everyone"
+            },
+            {
+                "type": "pace",
+                "visibility": "everyone"
+            },
+            {
+                "type": "power",
+                "visibility": "everyone"
+            },
+            {
+                "type": "speed",
+                "visibility": "everyone"
+            },
+            {
+                "type": "calories",
+                "visibility": "everyone"
+            }
+        ],
+        "hide_from_home": false,
+        "device_name": "Strava iPhone App",
+        "embed_token": "67a67666817f1d0a77d0ff28c20e9cbaae19dcf8",
+        "available_zones": [],
+        "team": "cool team"
+    },
+    {
+        "resource_state": 3,
+        "name": "12M, but no batton",
+        "distance": 2.4,
+        "moving_time": 13,
+        "elapsed_time": 40,
+        "total_elevation_gain": 0,
+        "type": "Ride",
+        "sport_type": "Ride",
+        "workout_type": 0,
+        "id": 10377452836,
+        "start_date": "2023-12-14T06:10:38Z",
+        "start_date_local": "2023-12-14T16:40:38Z",
+        "timezone": "(GMT+09:30) Australia/Adelaide",
+        "utc_offset": 37800,
+        "achievement_count": 0,
+        "kudos_count": 0,
+        "comment_count": 0,
+        "athlete_count": 1,
+        "photo_count": 0,
+        "trainer": false,
+        "commute": false,
+        "manual": false,
+        "private": true,
+        "visibility": "only_me",
+        "flagged": false,
+        "gear_id": null,
+        "average_speed": 0.188,
+        "max_speed": 0.295,
+        "has_heartrate": false,
+        "heartrate_opt_out": false,
+        "display_hide_heartrate_option": false,
+        "elev_high": 393.1,
+        "elev_low": 393,
+        "upload_id": 11108447219,
+        "upload_id_str": "11108447219",
+        "external_id": "FB23034A-3D22-4507-ACCD-D266C40D9344-activity.fit",
+        "from_accepted_tag": false,
+        "pr_count": 0,
+        "total_photo_count": 0,
+        "has_kudoed": false,
+        "description": null,
+        "calories": 0,
+        "perceived_exertion": null,
+        "prefer_perceived_exertion": null,
+        "segment_efforts": [],
+        "splits_metric": [
+            {
+                "distance": 2.4,
+                "elapsed_time": 36,
+                "elevation_difference": 0.1,
+                "moving_time": 9,
+                "split": 1,
+                "average_speed": 0.27,
+                "average_grade_adjusted_speed": null,
+                "pace_zone": 0
+            }
+        ],
+        "splits_standard": [
+            {
+                "distance": 2.4,
+                "elapsed_time": 36,
+                "elevation_difference": 0.1,
+                "moving_time": 9,
+                "split": 1,
+                "average_speed": 0.27,
+                "average_grade_adjusted_speed": null,
+                "pace_zone": 0
+            }
+        ],
+        "laps": [
+            {
+                "id": 35737441840,
+                "resource_state": 2,
+                "name": "Lap 1",
+                "activity": {
+                    "id": 10377452836,
+                    "visibility": "only_me",
+                    "resource_state": 1
+                },
+                "athlete": {
+                    "id": 34111405,
+                    "resource_state": 1
+                },
+                "elapsed_time": 40,
+                "moving_time": 13,
+                "start_date": "2023-12-14T06:10:38Z",
+                "start_date_local": "2023-12-14T16:40:38Z",
+                "distance": 0,
+                "average_speed": 0,
+                "max_speed": 0.295,
+                "lap_index": 1,
+                "split": 1,
+                "start_index": 0,
+                "end_index": 0,
+                "total_elevation_gain": 0,
+                "device_watts": false
+            }
+        ],
+        "photos": {
+            "primary": null,
+            "count": 0
+        },
+        "stats_visibility": [
+            {
+                "type": "heart_rate",
+                "visibility": "everyone"
+            },
+            {
+                "type": "pace",
+                "visibility": "everyone"
+            },
+            {
+                "type": "power",
+                "visibility": "everyone"
+            },
+            {
+                "type": "speed",
+                "visibility": "everyone"
+            },
+            {
+                "type": "calories",
+                "visibility": "everyone"
+            }
+        ],
+        "hide_from_home": false,
+        "device_name": "Strava iPhone App",
+        "embed_token": "2ba6079bccfce87417fa989ff5f70eac37fa94ef",
+        "available_zones": [],
+        "team": "Tonsley Todgers"
+    },
+    {
+        "resource_state": 3,
+        "name": "12th run. Leg 2",
+        "distance": 2000,
+        "moving_time": 600,
+        "elapsed_time": 600,
+        "total_elevation_gain": 0,
+        "type": "Run",
+        "sport_type": "Run",
+        "workout_type": null,
+        "id": 10377951499,
+        "start_date": "2023-12-14T09:10:25Z",
+        "start_date_local": "2023-12-14T19:40:25Z",
+        "timezone": "(GMT+09:30) Australia/Adelaide",
+        "utc_offset": 37800,
+        "achievement_count": 0,
+        "kudos_count": 0,
+        "comment_count": 0,
+        "athlete_count": 1,
+        "photo_count": 0,
+        "trainer": false,
+        "commute": false,
+        "manual": true,
+        "private": true,
+        "visibility": "only_me",
+        "flagged": false,
+        "gear_id": null,
+        "average_speed": 3.333,
+        "max_speed": 0,
+        "has_heartrate": false,
+        "heartrate_opt_out": false,
+        "display_hide_heartrate_option": false,
+        "upload_id": null,
+        "external_id": null,
+        "from_accepted_tag": false,
+        "pr_count": 0,
+        "total_photo_count": 0,
+        "has_kudoed": false,
+        "description": "",
+        "calories": 0,
+        "perceived_exertion": null,
+        "prefer_perceived_exertion": null,
+        "segment_efforts": [],
+        "best_efforts": [],
+        "photos": {
+            "primary": null,
+            "count": 0
+        },
+        "stats_visibility": [
+            {
+                "type": "heart_rate",
+                "visibility": "everyone"
+            },
+            {
+                "type": "pace",
+                "visibility": "everyone"
+            },
+            {
+                "type": "power",
+                "visibility": "everyone"
+            },
+            {
+                "type": "speed",
+                "visibility": "everyone"
+            },
+            {
+                "type": "calories",
+                "visibility": "everyone"
+            }
+        ],
+        "hide_from_home": false,
+        "embed_token": "4a8aaab3af34656d4b6e09bbd1ed4da8db9a9505",
+        "similar_activities": {
+            "effort_count": 0,
+            "average_speed": 0,
+            "min_average_speed": 0,
+            "mid_average_speed": 0,
+            "max_average_speed": 0,
+            "pr_rank": null,
+            "frequency_milestone": null,
+            "trend": {
+                "speeds": [],
+                "current_activity_index": null,
+                "min_speed": 0,
+                "mid_speed": 0,
+                "max_speed": 0,
+                "direction": 0
+            },
+            "resource_state": 2
+        },
+        "available_zones": [
+            "pace"
+        ],
+        "team": "Tonsley Todgers"
+    }
+]
