@@ -90,6 +90,7 @@ fetch(`${API_URL}${id}`).then(res => res.json()).then(data => {
     if (distanceDataByTeam[event.team].length > 0) {
       event.distance += distanceDataByTeam[event.team][distanceDataByTeam[event.team].length - 1][1];
     }
+    console.log('datetime', new Date(event.start_date).getTime());
     distanceDataByTeam[event.team].push([new Date(event.start_date).getTime(), event.distance]);
   });
 
@@ -100,6 +101,15 @@ fetch(`${API_URL}${id}`).then(res => res.json()).then(data => {
       data: distanceDataByTeam[team]
     });
   });
+
+  // find the minimum datetime in the series
+  const minDate = Math.min(...series.map(s => s.data[0][0]));
+
+  // add a point at the minimum datetime for each series to make the line start at 0
+  series.forEach(s => {
+    s.data.unshift([minDate, 0]);
+  });
+
   const width = window.innerWidth > 0 ? window.innerWidth : screen.width;
   if (width < 1000) {
     options.tooltip.style.fontSize = '30px';
