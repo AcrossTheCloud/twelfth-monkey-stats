@@ -16,6 +16,15 @@ let options = {
     },
     zoom: {
       enabled: false // disable zooming because of Safari bug
+    },
+    background: 'black',
+  },
+  grid: {
+    padding: {
+      top: 20,
+      right: 70,
+      bottom: 20,
+      left: 20
     }
   },
   xaxis: {
@@ -30,8 +39,9 @@ let options = {
   yaxis: {  
     max: 1000,
     min: 0,
-  },
 
+  },
+  
   theme: {
     mode: 'dark'
   },
@@ -85,10 +95,11 @@ let options = {
         labels: {
           style: {
             fontSize: '30px'
-          }
+          },
+
         },
           title: {
-            text: 'Distance (km)',
+            text: 'Distance (m)',
             style: {
 
             fontSize: '30px',
@@ -195,6 +206,16 @@ var seriesData = bar_series;
 var options3 = {
   chart: {
       type: 'bar',
+      background: 'black',
+
+  },
+  grid: {
+    padding: {
+      top: 20,
+      right: 70,
+      bottom: 20,
+      left: 20
+    }
   },
   series: seriesData,
   plotOptions: {
@@ -272,7 +293,7 @@ var options3 = {
           }
         },
           title: {
-            text: 'Distance (km)',
+            text: 'Distance (m)',
             style: {
 
             fontSize: '30px',
