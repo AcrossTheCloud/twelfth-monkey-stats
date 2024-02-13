@@ -27,3 +27,7 @@ The webpack configuration file can be found at `webpack.config.js`. It includes 
 
 This project is licensed under the [GPL-3](LICENSE).
 
+## DC UPDATE
+Modified the index.js with additional code to display bar chart and line chart. 
+Removed the 'rerun' data, it was too confusing. 
+Fixed the 'leg length' of each of the data coming from Strava to be consistent with the legnth of the leg requirement. 
