@@ -1,17 +1,42 @@
+
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8"/>
     <title>12th Monkey Stats</title>
-    <!-- Ensure you include Tailwind CSS -->
-</head>
-<body class="px-4 md:px-6 lg:px-8"> <!-- Adjust the padding as needed -->
-    <div id="chart3" class="h-1/2 w-full md:h-1/2 my-4"></div> <!-- Adjusted classes here -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
 
-    <div id="chart" class="h-1/2 w-full md:h-1/2 my-4"></div> <!-- Adjusted classes here -->
+    <style>
+      body {
+        font-family: 'Permanent Marker', cursive;
+      }
+    </style>
+</head>
+<body class="bg-gray-100 p-4 md:p-6 lg:p-8">
+  
+
+    <div class="max-w-screen-lg mx-auto">
+        <!-- Page Title -->
+        <h1 class="text-2xl font-bold text-center mb-8">12th Monkey Stats</h1>
+        <h1 class="text-2xl font-bold text-center mb-8">RERUN</h1>
+
+        <!-- First Chart Container -->
+        <div class="mb-8 p-4 bg-white shadow rounded-lg">
+            <h2 class="text-lg font-semibold mb-4">DISTANCE x TEAM</h2>
+            <div id="chart3" class="h-auto"></div>
+        </div>
+
+        <!-- Second Chart Container -->
+        <div class="p-4 bg-white shadow rounded-lg">
+            <h2 class="text-lg font-semibold mb-4">DISTANCE x DATE</h2>
+            <div id="chart" class="h-auto"></div>
+        </div>
+    </div>
 
     <script type="text/javascript">
-      // JavaScript for initializing the charts goes here
+        // JavaScript for initializing the charts goes here
     </script>
 </body>
 </html>

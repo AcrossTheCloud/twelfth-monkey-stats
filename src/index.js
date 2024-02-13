@@ -67,7 +67,7 @@ let options = {
                 color: '#fff',
                 background: '#00E396',
             },
-            text: 'FINISH LINE'
+            text: 'FINISH'
         }
     }],
   },
@@ -218,7 +218,7 @@ var options3 = {
                 color: '#fff',
                 background: '#00E396',
             },
-            text: 'FINISH LINE'
+            text: 'FINISH'
         }
     }],
   },
