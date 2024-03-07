@@ -1,10 +1,11 @@
 import './style.css';
 import ApexCharts from 'apexcharts';
-import Papa from 'papaparse'; // Make sure you import Papa Parse
 
-const legLength = 500; // This is the length of the leg in meters for the current event.
-const start_date = new Date('2024-02-01');
-
+const API_URL = 'https://qyjbcjs0x7.execute-api.ap-southeast-2.amazonaws.com/dev/';
+const params = new URLSearchParams(window.location.search);
+const id = params.get("id") || '9ff9bea3-2e05-412d-a5f9-1621fa4d03e9';
+const legLength = 500; //this is the length of the leg in meters for the current event. will need to be updated once we include this is a variable in the event data. 
+console.log(id);
 
 // OPTIONS FOR LINE CHART
 let options = {
@@ -28,14 +29,15 @@ let options = {
   },
   xaxis: {
     type: 'datetime',
-      labels: {
-        format: 'dd/MM/yyyy',
-        // Optionally, specify the formatter function for more complex scenarios
-      },
-      // Additional xaxis configurations...
+    datetimeFormatter: {
+      year: 'yyyy',
+      month: "MMM 'yy",
+      day: 'dd MMM',
+      hour: 'HH:mm'
     },
+  },
   yaxis: {  
-    max: 250000,
+    max: 1000,
     min: 0,
 
   },
@@ -49,7 +51,7 @@ let options = {
   },
   tooltip: {
     x: {
-      format: 'dd MM yyyy'
+      format: 'dd MMM yyyy'
     },
     y: {
       formatter: function (value) {
@@ -103,7 +105,7 @@ let options = {
             fontSize: '30px',
             },
           },
-          max: 250000,
+          max: 1000,
           min: 0,
       },
       legend: {
@@ -117,65 +119,88 @@ let options = {
   }]
 };
 
-
-// Function to process CSV data
-function processData(data) {
-  console.log('data')
-console.log(data)
+fetch(`${API_URL}${id}`).then(res => res.json()).then(data => {
   const teamNames = new Set(); 
   let distanceDataByTeam = {};
   
+  // // Sort data by event start date and calculate cumulative distances
+  // data.sort((a, b) => new Date(a.start_date).getTime() - new Date(b.start_date).getTime()).forEach(event => {
+  //   teamNames.add(event.team);
+  //   distanceDataByTeam[event.team] = distanceDataByTeam[event.team] || [];
+  //   if (distanceDataByTeam[event.team].length > 0) {
+  //     event.distance += distanceDataByTeam[event.team][distanceDataByTeam[event.team].length - 1][1];
+  //   }
+  //   distanceDataByTeam[event.team].push([new Date(event.start_date).getTime(), event.distance]);
+  // });
 
-  
-  data.forEach(event => {
+  data.sort((a, b) => new Date(a.start_date).getTime() - new Date(b.start_date).getTime()).forEach(event => {
     teamNames.add(event.team);
     distanceDataByTeam[event.team] = distanceDataByTeam[event.team] || [];
+    // Calculate cumulative distance by adding 10m to the last event's distance
     const lastDistanceIndex = distanceDataByTeam[event.team].length - 1;
     const lastDistance = lastDistanceIndex >= 0 ? distanceDataByTeam[event.team][lastDistanceIndex][1] : 0;
     const cumulativeDistance = lastDistance + legLength;
-
-    let excelDateString = event.timestamp; // Assuming DD-MM-YYYY HH:mm format
-    let parts = excelDateString.split(/[/ :]/);
-    // Assuming parts = ["31", "01", "2020", "15", "00"]
-
-    let date = new Date(Date.UTC(parts[2], parts[0] - 1, parts[1], parts[3], parts[4]));
-    let isoDateString = date.toISOString();
-
-    distanceDataByTeam[event.team].push([isoDateString, cumulativeDistance]);
+    distanceDataByTeam[event.team].push([new Date(event.start_date).getTime(), cumulativeDistance]);
   });
+  
+
+  // data.sort((a, b) => new Date(a.start_date).getTime() - new Date(b.start_date).getTime()).forEach(event => {
+  //   teamNames.add(event.team);
+  //   distanceDataByTeam[event.team] = distanceDataByTeam[event.team] || [];
+  //   // Set each event's distance to 10m directly without cumulative addition
+  //   distanceDataByTeam[event.team].push([new Date(event.start_date).getTime(), 10]);
+  // });
+  console.log('distanceDataByTeam');
+  console.log(distanceDataByTeam);
+  
 
   const line_series = Array.from(teamNames).map(team => ({
     name: team,
     data: distanceDataByTeam[team]
   }));
 
-  console.log('distanceDataByTeam', distanceDataByTeam)
+  console.log('line_series'); 
+  console.log(line_series);
+
 
   let totalDistanceByTeam = {};
+
+  // Iterate over each team in 'distanceDataByTeam'
+  // for (let team in distanceDataByTeam) {
+  //     // Sum the distances for the current team
+  //     let sum = distanceDataByTeam[team].reduce((acc, item) => acc + item[1], 0);
+      
+  //     // Assign the sum to the corresponding team in the new object
+  //     totalDistanceByTeam[team] = sum;
+  // }
+  
   for (let team in distanceDataByTeam) {
+    // Get the last entry for the current team
     const lastEntry = distanceDataByTeam[team][distanceDataByTeam[team].length - 1];
-    totalDistanceByTeam[team] = lastEntry[1];
-  }
+
+    // Assign the last distance value to the corresponding team in the new object
+    totalDistanceByTeam[team] = lastEntry[1]; // Assuming the distance is the second element in the entry
+}
+console.log('totalDistanceByTeam');
+console.log(totalDistanceByTeam);
 
   const bar_series = Array.from(teamNames).map(team => ({
     name: team,
+    // Sum the distance values for the team and wrap it in an array to conform to the expected data structure
     data: [totalDistanceByTeam[team]]
-  }));
+}));
+  console.log('bar_series');
+  console.log(bar_series);
 
   // Update options with the series data
-
-  console.log('line_series', line_series)
   options.series = line_series;
 
-  // Initialize and render the charts
-  var chart = new ApexCharts(document.querySelector("#chart"), options);
-  chart.render();
-  
-  // Update the bar chart series data and re-render
-  var options3 = {
-    // Your existing bar chart configuration
-    series: bar_series, // Update the series data for the bar chart
-  };
+ console.log(line_series);
+
+
+
+
+var seriesData = bar_series;
 
 // Chart options
 var options3 = {
@@ -192,7 +217,7 @@ var options3 = {
       left: 20
     }
   },
-  series: bar_series,
+  series: seriesData,
   plotOptions: {
       bar: {
           horizontal: false,
@@ -233,7 +258,7 @@ var options3 = {
       title: {
           text: 'Values'
       },
-      max: 250000,
+      max: 1000,
       min: 0,
   },
   
@@ -260,7 +285,7 @@ var options3 = {
         },
       },
       yaxis: {
-        max: 250000,
+        max: 1000,
         min: 0,
         labels: {
           style: {
@@ -293,16 +318,13 @@ var options3 = {
   
 };
 
-  var chart3 = new ApexCharts(document.querySelector("#chart3"), options3);
-  chart3.render();
-}
+// Initialize chart
+var chart3 = new ApexCharts(document.querySelector("#chart3"), options3);
+chart3.render();
+ // Render the line chart
+ var chart = new ApexCharts(document.querySelector("#chart"), options);
+ chart.render();
 
-// Parse CSV data using Papa Parse
-Papa.parse("/CSVs/DIII.csv", {
-  download: true,
-  header: true,
-  complete: function (results) {
-    console.log(results);
-    processData(results.data); // Call processData with the parsed data
-  }
+console.log(options3)
+
 });
