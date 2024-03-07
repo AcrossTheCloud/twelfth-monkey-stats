@@ -298,11 +298,11 @@ var options3 = {
 }
 
 // Parse CSV data using Papa Parse
-Papa.parse("/CSVs/DIII.csv", {
-  download: true,
-  header: true,
-  complete: function (results) {
-    console.log(results);
-    processData(results.data); // Call processData with the parsed data
-  }
-});
+// Papa.parse("/CSVs/DIII.csv", {
+//   download: true,
+//   header: true,
+//   complete: function (results) {
+//     console.log(results);
+//     processData(results.data); // Call processData with the parsed data
+//   }
+// });
