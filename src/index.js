@@ -5,7 +5,12 @@ import Papa from 'papaparse'
 const API_URL = 'https://stats-api.twelfth-monkey.com/';
 const params = new URLSearchParams(window.location.search);
 const id = params.get("id") || 'be04e65d-6977-4f28-8145-2618dd7e8d84';
-const legLength = 500; //this is the length of the leg in meters for the current event. will need to be updated once we include this is a variable in the event data. 
+const legLength = .5; //this is the length of the leg in meters for the current event. will need to be updated once we include this is a variable in the event data. 
+const finishDistance = 25 // this is the overall length of the race for the whole team in kms. 
+
+
+
+
 console.log(id);
 
 // OPTIONS FOR LINE CHART
@@ -36,10 +41,12 @@ let options = {
       },
       // Additional xaxis configurations...
     },
-  yaxis: {  
-    max: 250000,
-    min: 0,
-
+    yaxis: {
+      title: {
+          text: 'Kms'
+      },
+      max: finishDistance,
+      min: 0,
   },
   
   theme: {
@@ -68,18 +75,20 @@ let options = {
 
   annotations: {
     yaxis: [{
-        y: 500,
-        borderColor: '#00E396',
+        y: finishDistance,
+        borderColor: 'red',
         strokeWidth: 10,
         label: {
-            borderColor: '#00E396',
+            borderColor: 'red',
             style: {
-                color: '#fff',
-                background: '#00E396',
+                color: 'white',
+                background: 'red',
             },
             text: 'FINISH'
         }
     }],
+    zIndex: 3, // This will draw the annotations on top of the grid lines
+
   },
   responsive: [{
     breakpoint: 1000,
@@ -94,22 +103,22 @@ let options = {
       yaxis: {
         labels: {
           style: {
-            fontSize: '30px'
+            fontSize: '20px'
           },
 
         },
           title: {
-            text: 'Distance (m)',
+            text: 'Distance (km)',
             style: {
 
-            fontSize: '30px',
+            fontSize: '20px',
             },
           },
-          max: 250000,
+          max: finishDistance,
           min: 0,
       },
       legend: {
-        fontSize: '30px',
+        fontSize: '20px',
         
       },
       markers: {
@@ -230,14 +239,14 @@ var options3 = {
   },
   annotations: {
     yaxis: [{
-        y: 500,
-        borderColor: '#00E396',
+        y: finishDistance,
+        borderColor: 'red',
         strokeWidth: 10,
         label: {
-            borderColor: '#00E396',
+            borderColor: 'red',
             style: {
-                color: '#fff',
-                background: '#00E396',
+                color: 'white',
+                background: 'red',
             },
             text: 'FINISH'
         }
@@ -256,9 +265,9 @@ var options3 = {
   },
   yaxis: {
       title: {
-          text: 'Values'
+          text: 'Kms'
       },
-      max: 250000,
+      max: finishDistance,
       min: 0,
   },
   
@@ -268,7 +277,7 @@ var options3 = {
   tooltip: {
       y: {
           formatter: function (val) {
-              return val + " units"
+              return val + " kms"
           }
       }
   },
@@ -279,24 +288,24 @@ var options3 = {
       xaxis: {
         labels: {
           style: {
-            fontSize: '30px',
+            fontSize: '20px',
             
           }
         },
       },
       yaxis: {
-        max: 250000,
+        max: finishDistance,
         min: 0,
         labels: {
           style: {
-            fontSize: '30px'
+            fontSize: '20px'
           }
         },
           title: {
-            text: 'Distance (m)',
+            text: 'Distance (km)',
             style: {
 
-            fontSize: '30px',
+            fontSize: '20px',
             },
           },
 
@@ -309,7 +318,7 @@ var options3 = {
         size: 10
       },
       legend: {
-        fontSize: '30px',
+        fontSize: '20px',
         
       },
     },
