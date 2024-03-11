@@ -4,7 +4,7 @@ import Papa from 'papaparse'
 
 const API_URL = 'https://stats-api.twelfth-monkey.com/';
 const params = new URLSearchParams(window.location.search);
-const id = params.get("id") || 'be04e65d-6977-4f28-8145-2618dd7e8d84';
+const id = params.get("id") || 'fe293778-c791-4c3e-94dd-b55066a54b66';
 const legLength = .5; //this is the length of the leg in kilometers for the current event. will need to be updated once we include this is a variable in the event data. 
 const finishDistance = 25 // this is the overall length of the race for the whole team in kms. 
 
