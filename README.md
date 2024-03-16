@@ -11,8 +11,8 @@ An example of the JSON data returned can be found in [example.json](example.json
 ## Installation
 
 1. Clone the repository: `git clone https://github.com/AcrossTheCloud/twelfth-monkey-stats.git`
-2. Navigate to the project directory: `cd project`
-3. Install dependencies: `npm install`
+2. Navigate to the project directory: `cd twelfth-monkey-stats`
+3. Install dependencies: `pnpm install`
 
 ## Usage
 
