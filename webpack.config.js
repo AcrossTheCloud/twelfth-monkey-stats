@@ -16,6 +16,7 @@ module.exports = {
     new CopyPlugin({
       patterns: [
         { from: "src/CSVs", to: "CSVs" },
+        { from: "src/images", to: "images" },
       ]
     }),
   ],
