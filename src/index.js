@@ -221,7 +221,7 @@ fetch(`${API_URL}${id}`).then(res => res.json()).then(data => {
     },
     tooltip: {
       x: {
-        format: 'dd MM yyyy'
+        format: 'dd/MM/yyyy'
       },
       y: {
         formatter: function (value) {
