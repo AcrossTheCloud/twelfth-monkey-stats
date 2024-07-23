@@ -44,7 +44,7 @@ fetch(`${API_URL}${id}`).then(res => res.json()).then(data => {
     const lastDistanceIndex = distanceDataByTeam[teamName].length - 1;
     const lastDistance = lastDistanceIndex >= 0 ? distanceDataByTeam[teamName][lastDistanceIndex][1] : 0;
     const cumulativeDistance = lastDistance + distance;
-    distanceDataByTeam[teamName].push([new Date(timeFinished).getTime(), cumulativeDistance]);
+    distanceDataByTeam[teamName].push([new Date(timeFinished*1000).getTime(), cumulativeDistance]);
   });
 
 
@@ -63,6 +63,9 @@ fetch(`${API_URL}${id}`).then(res => res.json()).then(data => {
     name: team,
     data: distanceDataByTeam[team]
   }));
+
+  console.log('seriesByDate');
+  console.log(seriesByDate);
 
   // Chart options
   const optionsByTeam = {
