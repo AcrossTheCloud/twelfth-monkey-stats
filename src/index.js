@@ -12,8 +12,10 @@ const finishDistance = 25 // this is the overall length of the race for the whol
 
 
 fetch(`${API_URL}${id}`).then(res => res.json()).then(data => {
-  const { distance, eventData } = data;
+  const { distance, name, eventData } = data;
 
+  // Display the event name by setting the innerText of the element with the id 'event-name'
+  document.getElementById('event-name').innerText = `Event: ${name}`;
 
   const totalDistanceByTeam = eventData.reduce((acc, { teamName, timeFinished }) => {
     if (!acc[teamName]) {
