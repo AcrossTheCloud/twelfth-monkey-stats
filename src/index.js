@@ -132,6 +132,7 @@ fetch(`${API_URL}${id}`).then(res => res.json()).then(data => {
         },
         max: finishDistance,
         min: 0,
+        decimalsInFloat: 1,
     },
     
     fill: {
@@ -171,7 +172,6 @@ fetch(`${API_URL}${id}`).then(res => res.json()).then(data => {
               fontSize: '20px',
               },
             },
-
         },
         max: 1000,
         min: 0,
