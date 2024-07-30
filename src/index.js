@@ -5,8 +5,7 @@ import Papa from 'papaparse'
 const API_URL = 'https://stats-api.twelfth-monkey.com/';
 const params = new URLSearchParams(window.location.search);
 const id = params.get("id") || '80325d6b-5749-4001-8a1b-9502a641f2c1';
-const legLength = .5; //this is the length of the leg in kilometers for the current event. will need to be updated once we include this is a variable in the event data. 
-const finishDistance = 25 // this is the overall length of the race for the whole team in kms. 
+let finishDistance = 25 // this is the overall length of the race for the whole team in kms. 
 
 
 
@@ -18,6 +17,7 @@ fetch(`${API_URL}${id}`).then(res => res.json()).then(data => {
     return;
   }
   const { distance, name, eventData } = data;
+  finishDistance = distance * 50; // this is the overall length of the event in kms.
 
   // Display the event name by setting the innerText of the element with the id 'event-name'
   document.getElementById('event-name').innerText = `Event: ${name}`;
