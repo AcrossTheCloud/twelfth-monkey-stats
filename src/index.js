@@ -4,8 +4,8 @@ import Papa from 'papaparse'
 
 const API_URL = 'https://stats-api.twelfth-monkey.com/';
 const params = new URLSearchParams(window.location.search);
-const id = params.get("id") || '80325d6b-5749-4001-8a1b-9502a641f2c1';
-let finishDistance = 25 // this is the overall length of the race for the whole team in kms. 
+const id = params.get("id") || '3e56b5f5-e626-4365-91ee-0de8f4511ca0';
+let finishDistance = 25; // this is the overall length of the race for the whole team in kms. 
 
 
 
@@ -160,6 +160,7 @@ fetch(`${API_URL}${id}`).then(res => res.json()).then(data => {
         yaxis: {
           max: finishDistance,
           min: 0,
+          decimalsInFloat: 1,
           labels: {
             style: {
               fontSize: '20px'
@@ -289,6 +290,7 @@ fetch(`${API_URL}${id}`).then(res => res.json()).then(data => {
           },
           max: finishDistance,
           min: 0,
+          decimalsInFloat: 1,
         },
 
         legend: {
