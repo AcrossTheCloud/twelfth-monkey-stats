@@ -2,10 +2,16 @@ import './style.css';
 import ApexCharts from 'apexcharts';
 import Papa from 'papaparse'
 
-const API_URL = 'https://stats-api.twelfth-monkey.com/';
+
 const params = new URLSearchParams(window.location.search);
 const id = params.get("id") || '3e56b5f5-e626-4365-91ee-0de8f4511ca0';
-let finishDistance = 25; // this is the overall length of the race for the whole team in kms. 
+
+const dev = params.get("dev") || false;
+// cast the dev string to a boolean
+const isDev = dev === 'true';
+
+const API_URL = isDev ? 'https://stats-api-dev.twelfth-monkey.com/' : 'https://stats-api.twelfth-monkey.com/';
+let finishDistance = 25; // this is the overall length of the race for the whole team in kms.
 
 
 
