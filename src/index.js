@@ -28,13 +28,14 @@ fetch(`${API_URL}${id}`).then(res => res.json()).then(data => {
   // Display the event name by setting the innerText of the element with the id 'event-name'
   document.getElementById('event-name').innerText = `Event: ${name}`;
 
-  const totalDistanceByTeam = eventData.reduce((acc, { teamName, timeFinished }) => {
+  const totalDistanceByTeam = eventData.reduce((acc, { teamName }) => {
     if (!acc[teamName]) {
       acc[teamName] = 0;
     }
     acc[teamName] += distance;
     return acc;
-  });
+  }, {});
+
 
   const teamNames = new Set(eventData.map(({ teamName }) => teamName));
   const seriesByTeam = Array.from(teamNames).map(teamName => ({
@@ -42,6 +43,8 @@ fetch(`${API_URL}${id}`).then(res => res.json()).then(data => {
     // Sum the distance values for the team and wrap it in an array to conform to the expected data structure
     data: [totalDistanceByTeam[teamName]]
   }));
+
+  console.log('seriesByTeam', seriesByTeam);
   
 
   // now we need to create a new object that will store the cumulative distance data by date, by team.
