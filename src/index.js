@@ -219,6 +219,7 @@ fetch(`${API_URL}${id}`).then(res => res.json()).then(data => {
       type: 'datetime',
         labels: {
           format: 'dd/MM/yyyy',
+          datetimeUTC: false,
           // Optionally, specify the formatter function for more complex scenarios
         },
         // Additional xaxis configurations...
